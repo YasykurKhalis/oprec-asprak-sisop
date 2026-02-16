@@ -283,7 +283,7 @@ int main(int argc, char *argv[]) {
     }
     
     if (argc == 2 && strcmp(argv[1], "-start") == 0) {
-        // Cek apakah file PID sudah ada (artinya server mungkin sedang jalan)
+        // Cek apakah port 8888 listening
         if (system("fuser -n tcp 8888 > /dev/null 2>&1") == 0) {
             printf("Server is already running (Found PID file)!\n");
             return EXIT_FAILURE;
