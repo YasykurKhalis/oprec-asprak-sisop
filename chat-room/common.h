@@ -28,8 +28,7 @@ typedef struct {
     char room[NAME_LEN]; // Menyimpan nama room
 } client_t;
 
-// Variabel Global (akan didefinisikan di server.c)
-// Kita butuh Mutex untuk mencegah Race Condition (Syarat No. 4)
+// mutex mencegah race condition
 extern pthread_mutex_t clients_mutex;
 
 #endif
